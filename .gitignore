@@ -1,0 +1,16 @@
+# Supabase credentials — NEVER commit this
+config.js
+.env
+.env.local
+.env.production
+
+# OS stuff
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Node (if ever used)
+node_modules/

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Risky Fadillah — Portfolio</title>
+  <meta name="description" content="IT Student & Aspiring Financial Data Analyst at Universitas Sumatera Utara.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=Outfit:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Config (gitignored — create from config.example.js) -->
+  <script src="config.js" onerror="console.warn('config.js missing — copy config.example.js and fill in Supabase credentials')"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ────────────── NAVBAR ────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">RF<span class="logo-dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ────────────── HERO ────────────── -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-inner">
+
+      <div class="hero-text">
+        <div class="hero-available">
+          <span class="pulse-dot"></span>
+          Open to Opportunities
+        </div>
+        <p class="hero-greeting">Hi, I'm</p>
+        <h1 class="hero-name">
+          Risky
+          <span class="hero-name-em"><em>Fadillah</em></span>
+        </h1>
+        <p class="hero-role">
+          <span class="role-tag">IT Student</span>
+          <span class="role-sep">·</span>
+          <span class="role-tag">Financial Data Analyst</span>
+          <span class="role-sep">·</span>
+          <span class="role-tag">DeFi Enthusiast</span>
+        </p>
+        <p class="hero-desc">
+          Exploring the intersection of finance and technology — from data pipelines
+          to DeFi protocols, building skills toward fintech.
+        </p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-gold">View Projects</a>
+          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/Clementine5555" target="_blank" class="social-icon" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" class="social-icon" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-ring ring-outer"></div>
+        <div class="hero-ring ring-inner"></div>
+        <div class="hero-photo-frame">
+          <img src="assets/img/photo.png" alt="Risky Fadillah" class="hero-photo">
+        </div>
+        <div class="float-card float-top">
+          <span class="float-icon">📊</span>
+          <div>
+            <div class="float-label">Focus Area</div>
+            <div class="float-val">Fintech & Data</div>
+          </div>
+        </div>
+        <div class="float-card float-bottom">
+          <span class="float-icon">🎓</span>
+          <div>
+            <div class="float-label">Semester 4</div>
+            <div class="float-val">USU · Fasilkom-TI</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-bar"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ────────────── ABOUT ────────────── -->
+  <section class="section light-section" id="about">
+    <div class="container">
+      <div class="section-eyebrow">About</div>
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <h2 class="section-title">Bridging <em>Finance</em><br>& Technology</h2>
+          <p class="about-body">
+            IT student at Universitas Sumatera Utara with a stronger pull toward finance than code.
+            My target: <strong>Financial Data Analyst</strong> in fintech, using SQL, Python, and AI tools
+            to turn raw data into actionable insights.
+          </p>
+          <p class="about-body">
+            Outside academics, I lead event operations for a national IT competition,
+            dive into DeFi protocol mechanics, and trade on the side while building my portfolio.
+          </p>
+          <div class="stat-row">
+            <div class="stat-block">
+              <span class="stat-n">4th</span>
+              <span class="stat-l">Semester</span>
+            </div>
+            <div class="stat-div"></div>
+            <div class="stat-block">
+              <span class="stat-n">500+</span>
+              <span class="stat-l">Event Participants</span>
+            </div>
+            <div class="stat-div"></div>
+            <div class="stat-block">
+              <span class="stat-n">DeFi</span>
+              <span class="stat-l">Deep Interest</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-right reveal">
+          <div class="about-card">
+            <div class="acard-icon">💹</div>
+            <h3>Financial Analysis</h3>
+            <p>Market research, DeFi protocols, trading strategies, and financial data interpretation.</p>
+          </div>
+          <div class="about-card">
+            <div class="acard-icon">🗄️</div>
+            <h3>Data & Tech</h3>
+            <p>SQL, Python basics, Excel, and building data-driven solutions for financial use cases.</p>
+          </div>
+          <div class="about-card">
+            <div class="acard-icon">🎯</div>
+            <h3>Event Management</h3>
+            <p>Full logistics lead for CODE FEST — rundowns, RAB, Gantt charts, TOR documentation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────── SKILLS ────────────── -->
+  <section class="section dark-section" id="skills">
+    <div class="container">
+      <div class="section-eyebrow light">Skills</div>
+      <h2 class="section-title light">What I <em>Work With</em></h2>
+      <div class="skills-grid reveal">
+        <div class="skill-group">
+          <h3 class="skill-group-title">Finance & Data</h3>
+          <div class="tag-wrap">
+            <span class="tag">Financial Analysis</span>
+            <span class="tag">DeFi Research</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Market Research</span>
+            <span class="tag">Data Visualization</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">Programming</h3>
+          <div class="tag-wrap">
+            <span class="tag">Python</span>
+            <span class="tag">HTML / CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Git & GitHub</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">Tools</h3>
+          <div class="tag-wrap">
+            <span class="tag">TradingView</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">Figma</span>
+            <span class="tag">Notion</span>
+            <span class="tag">MS Office</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">Learning Now</h3>
+          <div class="tag-wrap">
+            <span class="tag learning">DeFi Protocols</span>
+            <span class="tag learning">Prompt Engineering</span>
+            <span class="tag learning">AMM Mechanics</span>
+            <span class="tag learning">Data Analytics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────── PROJECTS ────────────── -->
+  <section class="section light-section" id="projects">
+    <div class="container">
+      <div class="section-eyebrow">Projects</div>
+      <div class="projects-header">
+        <h2 class="section-title">Recent <em>Work</em></h2>
+        <a href="https://github.com/Clementine5555" target="_blank" class="btn btn-small-ghost">GitHub →</a>
+      </div>
+      <div class="projects-grid reveal" id="projectsGrid">
+        <div class="project-skeleton"></div>
+        <div class="project-skeleton"></div>
+        <div class="project-skeleton"></div>
+      </div>
+      <div id="noProjects" class="no-content" style="display:none">
+        <p>Projects will appear here once connected to Supabase.<br>
+        <a href="SETUP.md" class="text-link">Setup guide →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────── EXPERIENCE ────────────── -->
+  <section class="section dark-section" id="experience">
+    <div class="container">
+      <div class="section-eyebrow light">Experience</div>
+      <h2 class="section-title light">Where I've <em>Been</em></h2>
+      <div class="timeline reveal">
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <span class="tl-period">Jul 2025 — Present</span>
+            <h3 class="tl-title">PJ Final Day & Awarding Day</h3>
+            <div class="tl-org">CODE FEST 001 · HIMAFARMA USU</div>
+            <p class="tl-desc">
+              End-to-end operations for a national IT competition — 200+ finalists on Final Day,
+              300+ on Awarding Day. Managed full documentation: rundowns, RAB, Gantt timeline,
+              guidebooks, and TOR. Guest: Shandika Galih (Web Programming UNPAS).
+            </p>
+            <div class="tl-tags">
+              <span>Event Ops</span>
+              <span>Documentation</span>
+              <span>Coordination</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-body">
+            <span class="tl-period">2024 — Present</span>
+            <h3 class="tl-title">IT Student · Semester 4</h3>
+            <div class="tl-org">Universitas Sumatera Utara (USU)</div>
+            <p class="tl-desc">
+              Fasilkom-TI — coursework spanning Operating Systems, AI, HCI, Systems Analysis,
+              Server/Network Security, and Statistics. Building toward Financial Data Analyst in fintech.
+            </p>
+            <div class="tl-tags">
+              <span>Fasilkom-TI</span>
+              <span>AI</span>
+              <span>Security</span>
+              <span>Statistics</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────── CONTACT ────────────── -->
+  <section class="section light-section" id="contact">
+    <div class="container">
+      <div class="section-eyebrow">Contact</div>
+      <div class="contact-grid">
+        <div class="contact-left reveal">
+          <h2 class="section-title">Let's <em>Connect</em></h2>
+          <p class="contact-desc">
+            Open to internships, freelance data projects, or a conversation about fintech and DeFi.
+            Reach out through any of these channels.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:YOUR_EMAIL@gmail.com" class="clink">
+              <div class="clink-icon">✉️</div>
+              <div>
+                <div class="clink-label">Email</div>
+                <div class="clink-val">YOUR_EMAIL@gmail.com</div>
+              </div>
+            </a>
+            <a href="https://github.com/Clementine5555" target="_blank" class="clink">
+              <div class="clink-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="22"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div>
+                <div class="clink-label">GitHub</div>
+                <div class="clink-val">Clementine5555</div>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" class="clink">
+              <div class="clink-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="22"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div>
+                <div class="clink-label">LinkedIn</div>
+                <div class="clink-val">Update your LinkedIn URL</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-right reveal">
+          <div class="contact-quote-card">
+            <div class="quote-mark">"</div>
+            <p class="quote-text">Data is the new oil,<br>but only when refined.</p>
+            <div class="quote-author">— Financial Data Enthusiast</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────── FOOTER ────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-name">Risky Fadillah</span>
+        <span class="footer-copy">Built with care · 2025</span>
+        <a href="https://github.com/Clementine5555" target="_blank" class="footer-gh">@Clementine5555</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

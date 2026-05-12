@@ -1,0 +1,61 @@
+PORTFOLIO PROGRESS LOG
+======================
+Project: Risky Fadillah Personal Portfolio
+Repo: https://github.com/Clementine5555/Portofolio
+Last updated: 2026-05-12
+
+STATUS: Build complete — ready to push to GitHub
+
+─────────────────────────────────────
+FILES CREATED
+─────────────────────────────────────
+[x] index.html           — Full single-page portfolio HTML
+[x] assets/css/style.css — Complete CSS (navy + gold + off-white theme)
+[x] assets/js/main.js    — Navbar, scroll reveal, mobile menu, Supabase fetch
+[x] assets/img/photo.png — Profile photo (no background, smiling)
+[x] config.example.js   — Supabase credentials template
+[x] .gitignore           — config.js + .env excluded
+[x] SETUP.md             — Step-by-step Supabase setup guide
+[x] progress.txt         — This file
+
+─────────────────────────────────────
+DESIGN DECISIONS
+─────────────────────────────────────
+- Theme: Navy (#0b1628) + Off-white (#f5f0e8) + Gold (#c9973a)
+- Fonts: Fraunces (display/serif) + Outfit (body) + DM Mono (code/labels)
+- Layout: Alternating dark/light sections
+- Photo: Uses mix-blend-mode on dark bg, normal on hover
+- Animations: Floating cards, scroll reveal (IntersectionObserver), ring spin
+
+─────────────────────────────────────
+SECTIONS
+─────────────────────────────────────
+[x] Navbar (transparent → solid on scroll, mobile hamburger)
+[x] Hero (photo, floating stats cards, CTAs, scroll hint)
+[x] About (bio, stat row, 3 service cards)
+[x] Skills (4 categories with tags, "learning" dashed style)
+[x] Projects (Supabase fetch, skeleton loader, demo fallback)
+[x] Experience (timeline, 2 entries)
+[x] Contact (links + quote card)
+[x] Footer
+
+─────────────────────────────────────
+SUPABASE INTEGRATION
+─────────────────────────────────────
+- Projects fetched from `projects` table
+- Falls back to 3 demo projects if config.js missing
+- config.js is gitignored
+- SETUP.md has full SQL and instructions
+
+─────────────────────────────────────
+TODO / NEXT SESSION
+─────────────────────────────────────
+[ ] Fill in real email in index.html (search: YOUR_EMAIL)
+[ ] Fill in LinkedIn URL (search: YOUR_LINKEDIN)
+[ ] Push to GitHub: git add . && git commit -m "init portfolio" && git push
+[ ] Enable GitHub Pages: Settings → Pages → main branch
+[ ] Setup Supabase (follow SETUP.md)
+[ ] Create config.js from config.example.js
+[ ] Add real projects in Supabase Table Editor
+[ ] Optional: add Google Analytics or Umami for traffic tracking
+[ ] Optional: add CV/resume PDF download link
