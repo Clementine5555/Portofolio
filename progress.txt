@@ -2,60 +2,41 @@ PORTFOLIO PROGRESS LOG
 ======================
 Project: Risky Fadillah Personal Portfolio
 Repo: https://github.com/Clementine5555/Portofolio
-Last updated: 2026-05-12
+Last updated: 2026-05-12 (session 2)
 
-STATUS: Build complete — ready to push to GitHub
-
-─────────────────────────────────────
-FILES CREATED
-─────────────────────────────────────
-[x] index.html           — Full single-page portfolio HTML
-[x] assets/css/style.css — Complete CSS (navy + gold + off-white theme)
-[x] assets/js/main.js    — Navbar, scroll reveal, mobile menu, Supabase fetch
-[x] assets/img/photo.png — Profile photo (no background, smiling)
-[x] config.example.js   — Supabase credentials template
-[x] .gitignore           — config.js + .env excluded
-[x] SETUP.md             — Step-by-step Supabase setup guide
-[x] progress.txt         — This file
+STATUS: v2 pushed — data & links updated, SQL file ready
 
 ─────────────────────────────────────
-DESIGN DECISIONS
+CHANGES IN SESSION 2
 ─────────────────────────────────────
-- Theme: Navy (#0b1628) + Off-white (#f5f0e8) + Gold (#c9973a)
-- Fonts: Fraunces (display/serif) + Outfit (body) + DM Mono (code/labels)
-- Layout: Alternating dark/light sections
-- Photo: Uses mix-blend-mode on dark bg, normal on hover
-- Animations: Floating cards, scroll reveal (IntersectionObserver), ring spin
+[x] Email updated    → justrizky55@gmail.com
+[x] LinkedIn updated → linkedin.com/in/m-rizky-fadillah-696785330
+[x] Stat row         → "3+ Events" (bukan 500+ participants)
+[x] About card       → PKKB, USU Youth Expo, CODE FEST
+[x] Skills           → tambah Etherscan, DEX
+[x] Experience       → 5 entries: HIMATIF, CODE FEST, PKKB/Youth Expo,
+                        PKM Al-Khuwarizmi, Mahasiswa USU
+[x] Demo projects    → DeFi link fixed ke URL yang bener
+[x] supabase_setup.sql → schema + seed data + instruksi
 
 ─────────────────────────────────────
-SECTIONS
+FILES
 ─────────────────────────────────────
-[x] Navbar (transparent → solid on scroll, mobile hamburger)
-[x] Hero (photo, floating stats cards, CTAs, scroll hint)
-[x] About (bio, stat row, 3 service cards)
-[x] Skills (4 categories with tags, "learning" dashed style)
-[x] Projects (Supabase fetch, skeleton loader, demo fallback)
-[x] Experience (timeline, 2 entries)
-[x] Contact (links + quote card)
-[x] Footer
+index.html            — full portfolio HTML
+assets/css/style.css  — navy + gold + off-white
+assets/js/main.js     — navbar, reveal, Supabase fetch
+assets/img/photo.png  — foto profil no-bg (senyum)
+config.example.js     — template Supabase credentials
+supabase_setup.sql    — jalankan ini di Supabase SQL Editor
+.gitignore            — config.js + .env excluded
+SETUP.md              — panduan Supabase
+progress.txt          — ini
 
 ─────────────────────────────────────
-SUPABASE INTEGRATION
+TODO KAMU
 ─────────────────────────────────────
-- Projects fetched from `projects` table
-- Falls back to 3 demo projects if config.js missing
-- config.js is gitignored
-- SETUP.md has full SQL and instructions
-
-─────────────────────────────────────
-TODO / NEXT SESSION
-─────────────────────────────────────
-[ ] Fill in real email in index.html (search: YOUR_EMAIL)
-[ ] Fill in LinkedIn URL (search: YOUR_LINKEDIN)
-[ ] Push to GitHub: git add . && git commit -m "init portfolio" && git push
-[ ] Enable GitHub Pages: Settings → Pages → main branch
-[ ] Setup Supabase (follow SETUP.md)
-[ ] Create config.js from config.example.js
-[ ] Add real projects in Supabase Table Editor
-[ ] Optional: add Google Analytics or Umami for traffic tracking
-[ ] Optional: add CV/resume PDF download link
+[ ] Buka Supabase → SQL Editor → jalankan supabase_setup.sql
+[ ] Buat config.js dari config.example.js, isi URL + anon key
+[ ] Connect repo ke Netlify buat auto-deploy
+[ ] Optional: tambah foto thumbnail project di image_url Supabase
+[ ] Optional: CV/resume PDF download link di hero
