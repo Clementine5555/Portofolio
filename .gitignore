@@ -1,5 +1,4 @@
 # Supabase credentials — NEVER commit this
-config.js
 .env
 .env.local
 .env.production
